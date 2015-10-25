@@ -103,7 +103,6 @@ angular.module('starter.services', [])
 	
 	var attachToKeys = function(){
 		var keys = Settings.getKeys();
-		UIHelper.showAlert('We are currently working on the migration from old stellard to new stellar-core network. There will be a migration of funds to the new network and we will take care that no single stellar will be lost! However in the meantime we discourage from keeping stellars in the app, to avoid possible delays or other inconveniences.');
 		account.address = keys.address;
 		// initial balance (STR)
 		var data = {
