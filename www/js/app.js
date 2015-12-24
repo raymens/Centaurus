@@ -9,8 +9,9 @@ angular.module('starter', ['ionic', 'ng-cordova', 'pascalprecht.translate',
 .run(function ($ionicPlatform, $translate) {
 	$ionicPlatform.ready(function () {
 		// Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-		// for form inputs)
-	    if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
+	    // for form inputs)
+	    if (window.cordova && window.cordova.plugins &&
+            window.cordova.plugins.Keyboard && (device.platform != "windows")) {
 			cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
 		}
 		if (window.StatusBar) {
